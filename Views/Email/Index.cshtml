@@ -1,0 +1,23 @@
+﻿@model MessagingService.Models.Email
+<style type="text/css">
+.block {
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: #04AA6D;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+}
+</style>
+
+@using (Html.BeginForm("Send", "Email", FormMethod.Post))
+{
+    <center>
+    <h1>This will send an email to all the users in database</h1>
+    <p><small>Also sends an email every 24 hours</small></p>
+    <button type="submit" class="block">Send Email</button>
+    </center>
+}
+
