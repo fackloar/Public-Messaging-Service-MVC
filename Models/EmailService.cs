@@ -12,7 +12,7 @@ namespace MessagingService.Models
         {
             var emailMessage = new MimeMessage();
 
-            emailMessage.From.Add(new MailboxAddress("Admin", "fackloar@gmail.com"));
+            emailMessage.From.Add(new MailboxAddress("Admin", ""));
             emailMessage.To.Add(new MailboxAddress("", email));
             emailMessage.Subject = subject;
             emailMessage.Body = new TextPart(MimeKit.Text.TextFormat.Html)
@@ -20,7 +20,7 @@ namespace MessagingService.Models
                 Text = message
             };
 
-            using (StreamReader sr = File.OpenText(@"..\credentials.txt"))
+            using (StreamReader sr = File.OpenText(@"credentials.txt"))
             {
                 string loginString = "";
                 loginString = sr.ReadLine();

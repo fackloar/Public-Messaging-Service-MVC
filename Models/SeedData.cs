@@ -15,7 +15,6 @@ namespace MessagingService.Models
 
             var users = new List<User>()
             {
-                new User { Email = "fackloar@gmail.com", Name = "Roman" },
                 new User { Email = "john@doe.com", Name = "John Doe"},
                 new User { Email = "ivan.ivanovich@rusmail.ru", Name = "Ivan"}
             };
